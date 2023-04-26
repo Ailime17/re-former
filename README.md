@@ -1,2 +1,2 @@
 Assignment from <a href="https://www.theodinproject.com">The Odin Project</a>.
-The assignment was to create a form that is part of a Rails app, by following the given instructions. It's part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum.
+The assignment was to create forms (for adding and editing a user) that are part of a Rails app, by following the given instructions (create a vanilla html form first, and then transform it using Rails form helper methods). Assignment is part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum.
