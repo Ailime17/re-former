@@ -13,6 +13,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update(params_user)
+      redirect_to @user
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
   def params_user
     params.require(:user).permit(:username, :email, :password)
