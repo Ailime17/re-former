@@ -1,0 +1,25 @@
+<%= form_with model: @user do |f| %>
+
+  <% if @user.errors.any? %>
+    <p>The following errors prevented the user from being saved:</p>
+    <ul>
+      <% @user.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :username, "Username:" %>
+    <%= f.text_field :username %>
+  </div>
+  <div>
+    <%= f.label :email, "Email:" %>
+    <%= f.email_field :email, placeholder: "example@example.com" %>
+  </div>
+  <div>
+    <%= f.label :password, "Password:" %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit "Submit" %>
+<% end %>
